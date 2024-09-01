@@ -1,0 +1,33 @@
+html
+{
+    font-family: "open Sans", sans-serif;
+    background-color: #1c1a1a;
+}
+
+body 
+{
+    width: 620px;
+    margin: 0 auto;
+    background-color: #333232;
+    padding: 0 20px 20px 20px;
+}
+
+.topnav
+{
+    font-size: 18px;
+    background-color: #1c1a1a;
+    overflow: hidden;
+}
+
+.topnav a
+{
+    float: left;
+    color: #4a97c5;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.topnav a:hover
+{
+    background-color: #141414;
+}
