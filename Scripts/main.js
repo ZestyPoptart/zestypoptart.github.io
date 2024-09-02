@@ -29,9 +29,9 @@ const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
     const mySrc = myImage.getAttribute("src")
-    if (mySrc === "Images/Sonic_miku.jpg") {
-        myImage.setAttribute("src", "Images/Miku.webp");
+    if (mySrc === "Images/Banner.jpg") {
+        myImage.setAttribute("src", "Images/Sonic_miku.jpg");
     } else {
-        myImage.setAttribute("src", "Images/Sonic_miku.jpg")
+        myImage.setAttribute("src", "Images/Banner.jpg")
     }
 };
