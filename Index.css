@@ -11,6 +11,8 @@ html
     font-style: normal;
 }
 
+/* navbar */
+
 .topnav
 {
     font-size: 18px;
@@ -29,7 +31,6 @@ html
     background-color: #141414;
     color: #4a97c5;
 }
-
 
 h1, h2, h3, p, ul
 {
@@ -55,7 +56,6 @@ p, ul
     font-size: 15px;
     list-style-position: inside;
 }
-
 button
 {
     position: absolute;
