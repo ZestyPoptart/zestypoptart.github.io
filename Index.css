@@ -149,7 +149,6 @@
     font-size: 10px;
 }
 
-
 html
 {
     font-family:  "Comic Neue", cursive;
@@ -190,8 +189,8 @@ p, ul
 button
 {
     position: absolute;
-    top: 8px;
-    right: 7px;
+    bottom: 8px;
+    left: 0;
     background-color: #333232;
     border-color: #333232;
     color: #4a97c5;
