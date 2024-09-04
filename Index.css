@@ -5,7 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Sidebar */
+html
+{
+    font-family:  "Comic Neue", cursive;
+    background-color: #1c1a1a;
+}
+
+.comic-neue-regular 
+{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Sidebar Start */
+
 .sidebar
 {
     position: absolute;
@@ -149,31 +163,12 @@
     font-size: 10px;
 }
 
-html
-{
-    font-family:  "Comic Neue", cursive;
-    background-color: #1c1a1a;
-}
-
-.comic-neue-regular 
-{
-    font-family: "Comic Neue", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+/* Sidebar End */
 
 h1, h2, h3, p, ul
 {
     color: #4a97c5;
     margin: 0 auto;
-}
-
-.welcome
-{
-    font-size: 30px;
-    position: absolute;
-    left: 5px;
-    top: 0;
 }
 
 h2
@@ -186,6 +181,7 @@ p, ul
     font-size: 15px;
     list-style-position: inside;
 }
+
 button
 {
     position: absolute;
@@ -194,6 +190,16 @@ button
     background-color: #333232;
     border-color: #333232;
     color: #4a97c5;
+}
+
+/* Homepage Start */
+
+.welcome
+{
+    font-size: 30px;
+    position: absolute;
+    left: 5px;
+    top: 0;
 }
 
 .banner
@@ -216,3 +222,5 @@ button
     left: 5px;
     top: 600px;
 }
+
+/* Homepage End */
