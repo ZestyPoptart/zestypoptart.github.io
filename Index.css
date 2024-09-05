@@ -11,6 +11,21 @@ html
     background-color: #1c1a1a;
 }
 
+button
+{
+    color: #4a97c5;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #111111;
+    background: #1c1a1a;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
 .comic-neue-regular 
 {
     font-family: "Comic Neue", cursive;
@@ -125,6 +140,7 @@ html
 .sidebar ul li .tooltips
 {
     position: absolute;
+    display: none;
     left: 125px;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -138,6 +154,7 @@ html
 
 .sidebar ul li:hover .tooltips
 {
+    display: inline-block;
     opacity: 1;
 }
 
@@ -159,8 +176,17 @@ html
 
 .user
 {
-    text-align: center;
+    text-align: left;
     font-size: 10px;
+}
+
+.User_btn
+{
+    width: 80px;
+    height: 10;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
 }
 
 /* Sidebar End */
@@ -171,25 +197,10 @@ h1, h2, h3, p, ul
     margin: 0 auto;
 }
 
-h2
-{
-    font-size: 25px;
-}
-
 p, ul
 {
     font-size: 15px;
     list-style-position: inside;
-}
-
-button
-{
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-    background-color: #333232;
-    border-color: #333232;
-    color: #4a97c5;
 }
 
 /* Homepage Start */
@@ -216,7 +227,7 @@ button
     z-index: -1;
 }
 
-.About-me
+.About_me
 {
     position: absolute;
     left: 5px;
@@ -224,3 +235,41 @@ button
 }
 
 /* Homepage End */
+
+/* Portfolio Start */
+/* Header Start */
+
+.Intro
+{
+    position: absolute;
+    left: 5px;
+    top: 0px;
+}
+
+.Intro_header
+{
+    font-size: 30px;
+}
+
+.Intro_text
+{
+    font-size: 17px;
+}
+
+/* Header End */
+/* Buttons Start */
+
+.Theme_btn
+{
+    width: 150px;
+    height: 45px;
+    margin: 1.5rem;
+    border: none;
+    box-shadow: 4px 4px 10px , -4px -4px 10px;
+}
+
+.Theme_btn:hover
+{
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
