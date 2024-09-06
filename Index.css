@@ -26,6 +26,23 @@ button
     cursor: pointer;
 }
 
+h1, h2, h3, p, ul
+{
+    color: #4a97c5;
+    margin: 0 auto;
+}
+
+p, ul
+{
+    font-size: 15px;
+    list-style-position: inside;
+}
+
+a
+{
+    text-decoration: none;
+}
+
 .comic-neue-regular 
 {
     font-family: "Comic Neue", cursive;
@@ -154,8 +171,10 @@ button
 
 .sidebar ul li:hover .tooltips
 {
+    background-color: #1c1a1a;
     display: inline-block;
     opacity: 1;
+    box-shadow: 2px 2px 10px #494949, -2px -2px 10px #494949 
 }
 
 .sidebar.active ul li .tooltips
@@ -190,19 +209,6 @@ button
 }
 
 /* Sidebar End */
-
-h1, h2, h3, p, ul
-{
-    color: #4a97c5;
-    margin: 0 auto;
-}
-
-p, ul
-{
-    font-size: 15px;
-    list-style-position: inside;
-}
-
 /* Homepage Start */
 
 .welcome
@@ -257,13 +263,13 @@ p, ul
 }
 
 /* Header End */
-/* Buttons Start */
+/* Discord Theme Start */
 
 .Theme_btn
 {
     width: 150px;
     height: 45px;
-    margin: 1.5rem;
+    margin: 1.2rem;
     border: none;
     box-shadow: 4px 4px 10px , -4px -4px 10px;
 }
@@ -273,3 +279,11 @@ p, ul
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
 }
+
+.Theme_preview
+{
+    position: absolute;
+    left: 5px;
+}
+
+/* Discord Theme End */
