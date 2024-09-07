@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>Pooptart-Calculator</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-nav">
+            <div class="top">
+                <div class="logo">
+                    <i class='bx bxs-moon'></i>
+                    <span>MIKU!!!</span>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <div class="user">
+                <h1></h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-home'></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                    <span class="tooltips">Home</span>
+                </li>
+                <li>
+                    <a href="Portfolio.html">
+                        <i class='bx bxs-folder'></i>
+                        <span class="nav-item">Portfolio</span>
+                    </a>
+                    <span class="tooltips">Portfolio</span>
+                </li>
+                <li>
+                    <a href="Clips.html">
+                        <i class='bx bxs-videos'></i>
+                        <span class="nav-item">Clips</span>
+                    </a>
+                    <span class="tooltips">Clips</span>
+                </li>
+                <li>
+                    <a href="Calculator.html">
+                        <i class="bx bxs-calculator"></i>
+                        <span class="nav-item">Calculator</span>
+                    </a>
+                    <span class="tooltips">Calculator</span>
+                </li>
+                <div class="User_btn">
+                    <button class="Change_user">Change user</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="Calc_Body">
+            <div class="Calculator">
+                <input class="display" readonly>
+                <div class="Calc_Buttons">
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('+')">+</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay('-')">-</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('*')">*</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="appendToDisplay('/')">/</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/Index.js"></script>
+    <script src="Scripts/Calculator.js"></script>
+</body>
+</html>
