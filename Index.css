@@ -266,12 +266,17 @@ a
     margin: 1.2rem;
     border: none;
     box-shadow: 4px 4px 10px , -4px -4px 10px;
+    color: #4a97c5;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #1c1a1a;
 }
 
 .Theme_btn:hover
 {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+    background-color: #1c1a1c;
+    transform: translate(0px, -3px);
 }
 
 .Theme_preview
