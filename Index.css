@@ -358,3 +358,8 @@ button:nth-child(14)
 {
     color: red;
 }
+
+.mikutest
+{
+    filter: grayscale(1);
+}
