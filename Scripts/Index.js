@@ -8,7 +8,7 @@ btn.onclick = function () {
 
 
 /* Getting and storing name */
-const myButton = document.querySelector("button");
+const myButton = document.getElementsByClassName(".Change_user");
 const myHeading = document.querySelector("h1");
 
 function setUserName() {
