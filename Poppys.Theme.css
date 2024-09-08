@@ -113,11 +113,6 @@
 .appMount_ea7e65{background-image:var(--theme-background-image)!important;background-size:cover!important}.app_a01fb1{background-color:initial}
 .bg_d4b6c5{background-color:var(--theme-transparency)}
 
-
-#app-mount .wrapper_c51b4e {
-	border-radius: var(--rs-avatar-shape);
-  }
-
 .userPanelOuter_c69a7b {
 	--background-secondary-alt: var(--bg-4) !important;
 }
