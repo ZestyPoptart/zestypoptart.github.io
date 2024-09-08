@@ -1172,7 +1172,4 @@ html.theme-light,
 	--white-500: var(--text-1);
 }
 
-.appMount_ea7e65
-{
-	background-image:var(--theme-background-image)
-}
+.appMount_ea7e65{background-image:var(--theme-background-image)!important;background-size:cover!important}
