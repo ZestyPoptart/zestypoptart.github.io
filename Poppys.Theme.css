@@ -1171,3 +1171,10 @@ html.theme-light,
 
 	--white-500: var(--text-1);
 }
+
+body::before {
+	background: var(--background_v) var(--backgroundposition_v)/var(--backgroundsize_v);
+}
+body::after {
+	backdrop-filter: blur(var(--backgroundblur_v));
+}
