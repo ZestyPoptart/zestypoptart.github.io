@@ -465,7 +465,10 @@ a[href="https://support.discord.com"] /* hide help */
 .container_b2ca13{
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
-.privateChannels_f0963d /* dms list */,
+ /* dms list */
+.privateChannels_f0963d{
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+}
 .container_c2739c /* friends page */,
 .applicationStore_cecc86 /* nitro page */,
 #app-mount .container_f3abf4 /* message requests */,
