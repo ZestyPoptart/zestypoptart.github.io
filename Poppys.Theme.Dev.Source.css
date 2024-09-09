@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
 
-/* customize things here */
+
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: 'gg sans';
+	--font: 'comic sans ms';
 
 	/* top left corner text */
-	--corner-text: 'Discord';
+	--corner-text: 'Mikucord!';
 
 	/* color of status indicators and window controls */
-	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
-	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
-	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--online-indicator: hsl(145, 65%, 39%); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(0, 80%, 24%); /* change to #f13f43 for default red */
+	--idle-indicator: #f0b232; /* change to #f0b232 for default yellow */
 	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
-	--accent-1: hsl(190, 70%, 60%); /* links */
-	--accent-2: hsl(190, 70%, 48%); /* general unread/mention elements */
-	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
-	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
-	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
-	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
-	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
+	--accent-1: hsl(0, 75%, 35%); /* links */
+	--accent-2: hsl(0, 75%, 35%); /* general unread/mention elements */
+	--accent-3: hsl(0, 75%, 35%); /* accent buttons */
+	--accent-4: hsl(0, 75%, 20%); /* accent buttons when hovered */
+	--accent-5: hsl(0, 75%, 20%); /* accent buttons when clicked */
+	--mention: hsla(0, 50%, 20%, 0.25); /* mentions & mention messages */
+	--mention-hover: hsla(0, 50%, 20%, 0.12); /* mentions & mention messages when hovered */
 
 	/* text colors */
 	--text-0: white; /* text on colored elements */
@@ -34,14 +35,16 @@
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
-	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
-	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--bg-3: rgb(32, 32, 32); /* spacing, secondary elements */
+	--bg-4: rgb(20, 20, 20, .5); /* main background color */
+	--theme-background-image: url("https://images7.alphacoders.com/115/1157070.jpg"); /* For image to appear change the 4th number in the line above to "0" */
+	--theme-transparency: rgb(0, 0, 0, 0.6); /* Background image blur, first 3 numbers correspond to the color, last number is the opacity */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
-	--spacing: 12px;
+	--spacing: 7px;
 
 	/* animations */
 	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
@@ -55,22 +58,35 @@
 	--roundness-l: 20px; /* popout panels */
 	--roundness-m: 16px; /* smaller panels, images, embeds */
 	--roundness-s: 12px; /* members, settings inputs */
-	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xs: 12px; /* channels, buttons */
 	--roundness-xxs: 8px; /* searchbar, small elements */
 
 	/* direct messages moon icon */
-	/* change to block to show, none to hide */
-	--discord-icon: none; /* discord icon */
-	--moon-icon: block; /* moon icon */
+	--moon-icon: none; /* moon icon */
 	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 	--moon-icon-size: auto;
+
 
 	/* filter uncolorable elements to fit theme */
 	/* (just set to none, they're too much work to configure) */
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
 	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+  	/* Server Columns */
+  	--columns:		2;
+	--guildsize:	50;
+	--guildgap:		3;
+	--aligndms:		1;
 }
+
+/* Read the second part of the README.md on the github repo for instructions on this */
+/* 
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+	background: url('');
+	background-color: transparent !important;
+	background-size: cover;
+} */
 
 /* change fonts (edit the variables above, not this part) */
 :root {
@@ -90,16 +106,19 @@
 #app-mount .container_ee69e0 /* channel list */,
 .privateChannels_f0963d /* dms list */,
 #app-mount .container_b2ca13 /* user panel inner */,
-.members_cbd271 /* member list inner */,
-.member_a31c43 /* member list members */,
+.members_cbd271  /* member list inner */
+
+.member_a31c43/* member list members */
 .searchResultsWrap_c2b47d /* search results */,
 .searchHeader_b7c924 /* search results header */,
 .chat_a7d72e.container_f3abf4 /* message requests */,
 #app-mount .panels_a4d4d9 > div /* user panel children */,
 .container_adcaac /* vc panel */,
-.sidebarRegionScroller_c25c6d /* settings left */,
+.sidebarRegionScroller_c25c6d{
+	background-color: var(--bg-4);
+} /* settings left */
 #app-mount .container_f1fd9c /* browse channels container */,
-#app-mount .header_f1fd9c /* browse channels header */,
+#app-mount .header_fd6364 /* browse channels header */
 #app-mount .container_c2efea /* browse channels inner */,
 .chat_a7d72e.background_e85cee /* server guide body */,
 #app-mount .scrollerContainer_c6b11b /* channels and roles customize */,
@@ -134,10 +153,16 @@
 .newChannel_ecb303 /* new channel */ {
 	background: var(--bg-1) !important;
 }
-.chat_a7d72e /* chat + member list */,
-.sidebar_a4d4d9 /* channel sidebar */,
-.privateChannels_f0963d .scroller_c47fa9 /* dms list inner */,
-#app-mount .innerHeader_f1fd9c:after /* channels and roles header shadow */,
+.chat_a7d72e/* chat + member list */,
+.sidebar_a4d4d9{
+	background-color: transparent;
+} /* channel sidebar */
+.privateChannels_f0963d .scroller_c47fa9{
+	background-color: transparent;
+} /* dms list inner */,
+#app-mount .innerHeader_f1fd9c:after{
+	color: var(--transparent-hsl);
+} /* channels and roles header shadow */,
 .attachedBars_d0696b /* reply bar underneath */ {
 	background: none;
 }
@@ -352,17 +377,13 @@ svg[fill='#593695'] {
 
 /* separate header bar */
 .title_a7d72e.themed_fc4f04 /* remove bg */ {
-	background: none;
+	background: var(--bg-4);
 }
 .searchResultsWrap_c2b47d /* allow overflow */ {
 	overflow: visible;
 }
 .chatContent_a7d72e::before /* main chat */,
-
-/* member list */
-.membersWrap_cbd271::before {
-	color: var(--bg-4);
-}
+.membersWrap_cbd271::before /* member list */
 .searchResultsWrap_c2b47d::before /* search results */,
 .userPanelOuter_c69a7b::before /* dm profile */,
 .container_a6d69a::before /* forums */ {
@@ -407,10 +428,8 @@ a[href="https://support.discord.com"] /* hide help */
 .base_a4d4d9 /* outside edges */ {
 	margin: 0 var(--spacing) var(--spacing) 0;
 }
-.sidebar_a4d4d9 /* channel list and user panel */,
-.content_a7d72e /* between chat and member list */ {
-	gap: var(--spacing);
-}
+.sidebar_a4d4d9/* channel list and user panel */,
+.content_a7d72e /* between chat and member list */ 
 .sidebar_a4d4d9 /* channel list and chat */ {
 	margin-right: var(--spacing);
 }
@@ -435,8 +454,17 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* add rounded corners */
-.container_ee69e0 /* channel list */,
-.panels_a4d4d9 /* user panels */,
+/* channel list */
+.container_ee69e0{
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+}
+ /* user panels */
+.panels_a4d4d9{
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+.container_b2ca13{
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
 .privateChannels_f0963d /* dms list */,
 .container_c2739c /* friends page */,
 .applicationStore_cecc86 /* nitro page */,
@@ -454,15 +482,15 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-xl);
 	overflow: hidden;
 }
-.container__93316 /* main chat */,
-.chatContent_a7d72e /* main chat inner */,
+.container__93316{
+	border-radius: 0;
+} /* main chat */
+.chatContent_a7d72e{
+	border-radius: 0;
+} /* main chat inner */
 
-/* members list */
-.container_cbd271 {
-	color: var(--bg-4);
-} 
-
-.members_cbd271 /* members list inner */,
+.container_cbd271/* members list */
+.members_cbd271/* members list inner */,
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
 .userPanelOuter_c69a7b /* profile panel inner */,
@@ -511,7 +539,9 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-m);
 }
 .scrollableContainer_d0696b /* message bar */,
-.channelTextArea_a7d72e /* message bar underneath */,
+.channelTextArea_a7d72e{
+	background-color: var(--bg-4);
+} /* message bar underneath */,
 .select_f6639d /* bot dropdown select */,
 .layout_e9f61e /* members */,
 .interactive_f5eb4b /* dms */,
@@ -612,7 +642,7 @@ button.button_dd4f85 /* small buttons */,
 	z-index: 1;
 }
 .childWrapper_f90abb {
-	background: var(--bg-3);
+	background: var(--bg-4);
 }
 .container_a4d4d9 > [style$='display: flex;'] > .guilds_a4d4d9 {
 	margin: 0;
@@ -864,6 +894,11 @@ button.button_f67531 /* make user panel buttons round */ {
 }
 .bottom_eba0ba > .containerPadding_eba0ba:hover {
 	margin-bottom: -12px;
+}
+
+/* Footer/discover button removal */
+.footer_aa1bff{
+	display: none;
 }
 
 .theme-light {
