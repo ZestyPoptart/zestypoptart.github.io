@@ -491,7 +491,7 @@ a[href="https://support.discord.com"] /* hide help */
 .markup_f8f345 code /* code block */,
 .itemCard_f02fcf{
 	color: (var(--bg-4));
-} /* friend activity */,
+} /* friend activity */
 .peopleListItem_d51464:hover /* online list friends */,
 .withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
 .messageGroupWrapper_ac90a2 /* pinned messages */,
