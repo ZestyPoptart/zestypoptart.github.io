@@ -489,7 +489,9 @@ a[href="https://support.discord.com"] /* hide help */
 .oneByOneGridSingle_cda674 /* image container single */,
 .imageContainer_cf58b5 .imageWrapper__178ee /* gif wrapper */,
 .markup_f8f345 code /* code block */,
-.itemCard_f02fcf /* friend activity */,
+.itemCard_f02fcf{
+	color: (var(--bg-4));
+} /* friend activity */,
 .peopleListItem_d51464:hover /* online list friends */,
 .withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
 .messageGroupWrapper_ac90a2 /* pinned messages */,
