@@ -383,11 +383,7 @@ svg[fill='#593695'] {
 	overflow: visible;
 }
 .chatContent_a7d72e::before /* main chat */,
-
-/* member list */
-.membersWrap_cbd271{
-	background-color: var(--bg-4) !important;
-}
+.membersWrap_cbd271::before /* member list */
 .searchResultsWrap_c2b47d::before /* search results */,
 .userPanelOuter_c69a7b::before /* dm profile */,
 .container_a6d69a::before /* forums */ {
@@ -432,7 +428,7 @@ a[href="https://support.discord.com"] /* hide help */
 .base_a4d4d9 /* outside edges */ {
 	margin: 0 var(--spacing) var(--spacing) 0;
 }
-.sidebar_a4d4d9 /* channel list and user panel */,
+.sidebar_a4d4d9/* channel list and user panel */,
 .content_a7d72e /* between chat and member list */ 
 .sidebar_a4d4d9 /* channel list and chat */ {
 	margin-right: var(--spacing);
@@ -458,8 +454,17 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* add rounded corners */
-.container_ee69e0 /* channel list */,
-.panels_a4d4d9 /* user panels */,
+/* channel list */
+.container_ee69e0{
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+}
+ /* user panels */
+.panels_a4d4d9{
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+.container_b2ca13{
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
 .privateChannels_f0963d /* dms list */,
 .container_c2739c /* friends page */,
 .applicationStore_cecc86 /* nitro page */,
@@ -482,8 +487,9 @@ a[href="https://support.discord.com"] /* hide help */
 } /* main chat */
 .chatContent_a7d72e{
 	border-radius: 0;
-} /* main chat inner */,
+} /* main chat inner */
 
+.container_cbd271/* members list */
 .members_cbd271/* members list inner */,
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
@@ -888,6 +894,11 @@ button.button_f67531 /* make user panel buttons round */ {
 }
 .bottom_eba0ba > .containerPadding_eba0ba:hover {
 	margin-bottom: -12px;
+}
+
+/* Footer/discover button removal */
+.footer_aa1bff{
+	display: none;
 }
 
 .theme-light {
