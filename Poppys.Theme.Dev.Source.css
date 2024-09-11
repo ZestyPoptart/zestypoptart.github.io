@@ -35,8 +35,9 @@
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
-	--bg-3: rgb(32, 32, 32); /* spacing, secondary elements */
+	--bg-3: rgb(32, 32, 32, 1); /* spacing, secondary elements */
 	--bg-4: rgb(20, 20, 20, .5); /* main background color */
+	--bg-5: hsl(var(--bg-4)/1) ;
 	--theme-background-image: url("https://images7.alphacoders.com/115/1157070.jpg"); /* For image to appear change the 4th number in the line above to "0" */
 	--theme-transparency: rgb(0, 0, 0, 0.6); /* Background image blur, first 3 numbers correspond to the color, last number is the opacity */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
@@ -62,7 +63,8 @@
 	--roundness-xxs: 8px; /* searchbar, small elements */
 
 	/* direct messages moon icon */
-	--moon-icon: none; /* moon icon */
+	--moon-icon: block; /* moon icon */
+	--discord-icon: none;
 	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 	--moon-icon-size: auto;
 
@@ -106,9 +108,9 @@
 #app-mount .container_ee69e0 /* channel list */,
 .privateChannels_f0963d /* dms list */,
 #app-mount .container_b2ca13 /* user panel inner */,
-.members_cbd271  /* member list inner */
+.members_cbd271 /* member list inner */
 
-.member_a31c43/* member list members */
+.member_a31c43 /* member list members */
 .searchResultsWrap_c2b47d /* search results */,
 .searchHeader_b7c924 /* search results header */,
 .chat_a7d72e.container_f3abf4 /* message requests */,
@@ -140,7 +142,7 @@
 	background: var(--bg-3);
 }
 .folderIconWrapper_bc7085[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
-	background: var(--bg-3) !important;
+	background: var(--bg-1) !important;
 }
 .folder_bc7085.hover_bc7085 /* folder opened on hover */, 
 #app-mount .outer_c0f6a6.interactive_c0f6a6:hover, #app-mount .outer_c0f6a6.active_c0f6a6 /* friend activity cards on hover */ {
@@ -153,16 +155,16 @@
 .newChannel_ecb303 /* new channel */ {
 	background: var(--bg-1) !important;
 }
-.chat_a7d72e/* chat + member list */,
+.chat_a7d72e /* chat + member list */,
 .sidebar_a4d4d9{
-	background-color: transparent;
+	background-color: transparent !important;
 } /* channel sidebar */
 .privateChannels_f0963d .scroller_c47fa9{
 	background-color: transparent;
-} /* dms list inner */,
+} /* dms list inner */
 #app-mount .innerHeader_f1fd9c:after{
 	color: var(--transparent-hsl);
-} /* channels and roles header shadow */,
+} /* channels and roles header shadow */
 .attachedBars_d0696b /* reply bar underneath */ {
 	background: none;
 }
@@ -465,10 +467,7 @@ a[href="https://support.discord.com"] /* hide help */
 .container_b2ca13{
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
- /* dms list */
-.privateChannels_f0963d{
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
-}
+.privateChannels_f0963d /* dms list */,
 .container_c2739c /* friends page */,
 .applicationStore_cecc86 /* nitro page */,
 #app-mount .container_f3abf4 /* message requests */,
@@ -492,7 +491,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: 0;
 } /* main chat inner */
 
-.container_cbd271/* members list */
+.container_cbd271 /* members list */
 .members_cbd271/* members list inner */,
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
@@ -546,7 +545,7 @@ a[href="https://support.discord.com"] /* hide help */
 	background-color: var(--bg-4);
 } /* message bar underneath */,
 .select_f6639d /* bot dropdown select */,
-.layout_e9f61e /* members */,
+.layout_e9f61e/* members */,
 .interactive_f5eb4b /* dms */,
 .container_c15230 /* thread link */,
 .input_f8bc55 /* settings inputs */,
@@ -625,7 +624,6 @@ button.button_dd4f85 /* small buttons */,
 .membersWrap_cbd271::after {
 	content: '';
 	position: absolute;
-	background: linear-gradient(transparent 85%, var(--bg-4) 100%);
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -636,7 +634,6 @@ button.button_dd4f85 /* small buttons */,
 .guilds_a4d4d9::before /* add top scroll shadow */ {
 	content: '';
 	position: absolute;
-	background: linear-gradient(var(--bg-4) 0%, transparent 15%);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -805,12 +802,7 @@ button.button_dd4f85 /* small buttons */,
 	border-radius: 4px;
 }
 /* modify embeds */
-.embedFull_b0068a {
-	border: 4px solid var(--bg-2);
-	border-top-color: transparent !important;
-	border-bottom-color: transparent !important;
-	border-right-color: transparent !important;
-}
+
 
 /* server selected marker */
 .item_c4cd66 {
@@ -907,9 +899,10 @@ button.button_f67531 /* make user panel buttons round */ {
 .theme-light {
 	--text-link: var(--accent-5);
 }
+
 html.theme-light,
 .theme-dark {
-	--activity-card-background: var(--bg-3);
+	--activity-card-background: var(--bg-4) ;
 	--android-navigation-bar-background: var(--primary-830);
 	--android-navigation-scrim-background: hsl(var(--primary-830-hsl) / 0.5);
 	--android-ripple: hsl(var(--white-500-hsl) / 0.07);
@@ -931,8 +924,8 @@ html.theme-light,
 	--background-modifier-selected: var(--active);
 	--background-nested-floating: var(--primary-630);
 	--background-primary: var(--bg-4);
-	--background-secondary: var(--bg-3);
-	--background-secondary-alt: var(--bg-3);
+	--background-secondary: var(--bg-4);
+	--background-secondary-alt: var(--bg-4);
 	--background-tertiary: var(--bg-3);
 	--bg-backdrop: hsl(var(--black-500-hsl) / 0.7);
 	--bg-backdrop-no-opacity: var(--black-500);
