@@ -37,7 +37,7 @@
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
 	--bg-3: rgb(32, 32, 32, 1); /* spacing, secondary elements */
 	--bg-4: rgb(20, 20, 20, .5); /* main background color */
-	--bg-5: hsl(var(--bg-4)/1) ;
+	--bg-5: rgba(var(--bg-4), .5) ;
 	--theme-background-image: url("https://images7.alphacoders.com/115/1157070.jpg"); /* For image to appear change the 4th number in the line above to "0" */
 	--theme-transparency: rgb(0, 0, 0, 0.6); /* Background image blur, first 3 numbers correspond to the color, last number is the opacity */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
@@ -105,15 +105,23 @@
 }
 
 /* modify colors */
-#app-mount .container_ee69e0 /* channel list */,
-.privateChannels_f0963d /* dms list */,
+#app-mount .container_ee69e0{
+	background-color: var(--bg-4);
+} /* channel list */
+.privateChannels_f0963d{
+	background-color: var(--bg-4);
+} /* dms list */
 #app-mount .container_b2ca13 /* user panel inner */,
-.members_cbd271 /* member list inner */
+.members_cbd271{
+	background-color: transparent;
+} /* member list inner */
 
 .member_a31c43 /* member list members */
 .searchResultsWrap_c2b47d /* search results */,
 .searchHeader_b7c924 /* search results header */,
-.chat_a7d72e.container_f3abf4 /* message requests */,
+.chat_a7d72e.container_f3abf4{
+	background-color: var(--bg-4) !important;
+} /* message requests */
 #app-mount .panels_a4d4d9 > div /* user panel children */,
 .container_adcaac /* vc panel */,
 .sidebarRegionScroller_c25c6d{
@@ -378,9 +386,7 @@ svg[fill='#593695'] {
 }
 
 /* separate header bar */
-.title_a7d72e.themed_fc4f04 /* remove bg */ {
-	background: var(--bg-4);
-}
+.title_a7d72e.themed_fc4f04 /* remove bg */ 
 .searchResultsWrap_c2b47d /* allow overflow */ {
 	overflow: visible;
 }
@@ -440,6 +446,7 @@ a[href="https://support.discord.com"] /* hide help */
 }
 .resizeHandle_d1c246 /* pretend to be a margin */ {
 	width: var(--spacing);
+	background-color: transparent;
 }
 .wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc /* fullscreen vc */ {
 	margin-top: var(--spacing);
@@ -455,6 +462,10 @@ a[href="https://support.discord.com"] /* hide help */
 	padding: 10px;
 }
 
+.container_bf550a{
+	background-color: transparent;
+}
+
 /* add rounded corners */
 /* channel list */
 .container_ee69e0{
@@ -467,13 +478,20 @@ a[href="https://support.discord.com"] /* hide help */
 .container_b2ca13{
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
-.privateChannels_f0963d /* dms list */,
-.container_c2739c /* friends page */,
+.privateChannels_f0963d{
+	background-color: var(--bg-4);
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+} /* dms list */
+.container_c2739c{
+	border-radius: var(--roundness-xl);
+} /* friends page */,
 .applicationStore_cecc86 /* nitro page */,
 #app-mount .container_f3abf4 /* message requests */,
 .shop_e77fa3 /* discord shop */,
 .container_d576e9 /* family center */,
-.container_d1c246 /* message request */,
+.container_d1c246{
+	background-color: var(--bg-4) !important;
+} /* message request */
 #app-mount .callContainer_d880dc /* vc */, 
 .chat_a7d72e /* general chat container (for browse channels page */,
 .animatedContainer_fd6364 /* server image card */,
@@ -492,10 +510,12 @@ a[href="https://support.discord.com"] /* hide help */
 } /* main chat inner */
 
 .container_cbd271 /* members list */
-.members_cbd271/* members list inner */,
+.members_cbd271{
+	border-radius: 0 ;
+} /* members list inner */
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
-.userPanelOuter_c69a7b /* profile panel inner */,
+.userPanelOuter_c69a7b /* profile panel inner */
 .userPanelInner_c69a7b /* profile panel inner inner */,
 .userPanelInner_c69a7b::before /* profile panel inner inner filter */,
 .container_a6d69a /* forums */ {
