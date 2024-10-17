@@ -1,26 +1,23 @@
-*
-{
+:root{
+    font-size: 16px;
+    font-family: "Comic Neue";
+    --bg-primary: #1c1a1a;
+    --bg-secondary: #111111;
+    --text-primary: #4a97c5;
+    --text-secondary: #346a8a;
+    --transition-speed: 600ms;
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html
-{
-    font-family:  "Comic Neue", cursive;
-    background-color: #1c1a1a;
-}
-
-h1, h2, h3, p, ul
-{
-    color: #4a97c5;
-    margin: 0 auto;
-}
-
-p, ul
-{
-    font-size: 15px;
-    list-style-position: inside;
+main{
+    margin-left: 5rem;
+    padding: 1rem;
 }
 
 a
@@ -36,181 +33,155 @@ a
 }
 
 /* Sidebar Start */
-
-.sidebar
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80px;
-    background-color: #111111;
-    padding: 0.4rem 0.8rem;
-    transition: all 0.5s ease;
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: hidden;
 }
-
-.sidebar.active ~ .main-content
-{
-    left: 200px;
-    width: calc(100% - 200px);
-}
-
-.sidebar.active
-{
-    width: 200px;
-}
-
-.sidebar #btn
-{
-    position: absolute;
-    color: white;
-    top: .4rem;
-    left: 50%;
-    font-size: 1.2rem;
-    line-height: 50px;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-.sidebar .top .logo
-{
-    color: #4a97c5;
-    font-size: 30px;
+  
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    height: 50px;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+  
+.nav-item {
     width: 100%;
-    align-items: center;
-    pointer-events: none;
-    opacity: 0%;
 }
-
-.sidebar.active .top .logo
-{
-    opacity: 1;
-}
-
-.sidebar.active #btn
-{
-    position: absolute;
-    left: 90%;
-}
-
-.sidebar ul li
-{
-    position: relative;
-    list-style-type: none;
-    height: 50px;
-    width: 90%;
-    margin: 0.8rem auto;
-    line-height: 50px;
-}
-
-.sidebar ul li a
-{
-    color: #4a97c5;
+  
+.nav-link {
     display: flex;
     align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
     text-decoration: none;
-    border-radius: 0.8rem;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
 }
-
-.sidebar ul li a:hover
-{
-    background-color: #1c1a1a;
-    color: #4a97c5;
+  
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
 }
-
-.sidebar ul li a i
-{
-    min-width: 50px;
-    text-align: center;
-    height: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-}
-
-.sidebar .nav-item
-{
-    opacity: 0;
-}
-
-.sidebar.active .nav-item
-{
-    opacity: 1;
-}
-
-.sidebar ul li .tooltips
-{
-    position: absolute;
+  
+.link-text {
     display: none;
-    left: 125px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0.5rem 0.8rem #111111;
-    border-radius: .6rem;
-    padding: .4rem 1.2rem;
-    line-height: 1.8rem;
-    z-index: 20;
-    opacity: 0;
+    margin-left: 1rem;
 }
-
-.sidebar ul li:hover .tooltips
-{
-    background-color: #1c1a1a;
-    display: inline-block;
-    opacity: 1;
-    box-shadow: 2px 2px 10px #494949, -2px -2px 10px #494949 
+  
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
 }
-
-.sidebar.active ul li .tooltips
-{
-    display: none;
+  
+.fa-primary {
+    color: var(--text-primary);
 }
-
-.main-content
-{
-    position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 80px;
-    transition: all 0.5s ease;
-    width: calc(100% - 80px);
-    padding: 1rem;
+  
+.fa-secondary {
+    color: var(--text-secondary);
 }
-
-.user
-{
-    text-align: left;
-    font-size: 10px;
+  
+.fa-primary,
+.fa-secondary {
+    transition: var(--transition-speed);
 }
-
-.User_btn
-{
-    width: 80px;
-    height: 10;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    color: #4a97c5;
-    border-radius: 16px;
-    font-size: 17px;
+  
+.logo {
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-color: #111111;
-    background: #1c1a1a;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
 }
-
+  
+.logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+}
+  
+.logo-text {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+ }
+  
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+  
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+}
+  
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+}
 /* Sidebar End */
 /* Homepage Start */
 
 .welcome
 {
-    font-size: 30px;
+    font-size: 2rem;
     position: absolute;
-    left: 5px;
-    top: 0;
+    top: 0px;
+    z-index: -1;
 }
 
 .banner
@@ -230,7 +201,6 @@ a
 .About_me
 {
     position: absolute;
-    left: 5px;
     top: 600px;
 }
 
