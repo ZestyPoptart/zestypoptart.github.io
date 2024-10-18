@@ -7,6 +7,7 @@
   --text-primary: #4a97c5;
   --text-secondary: #346a8a;
   --transition-speed: 500ms;
+  --transition-speed-secondary: 400ms;
 }
 
 body{
@@ -27,6 +28,7 @@ main{
   background-color: var(--bg-secondary);
   transition: width 600ms ease;
   overflow: hidden;
+  z-index: 2;
 }
 
 .navbar-nav {
@@ -170,80 +172,66 @@ main{
   justify-content: space-around;
 }
 
-.welcome-text {
-  font-size: 3rem;
-}
-
 .welcome-image {
   mix-blend-mode: overlay;
 }
 
-@media only screen and (max-width: 950px) {
-.welcome-page{
-  flex-direction: column;
-  align-items: center;
+.welcome-text {
+  font-size: 3rem;
 }
 
-.cards {
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
+@media only screen and (max-width: 950px) {
+  .welcome-page{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 25rem;
+  }
 }
 
 .cards {
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.25rem;
-  font-weight: 700;
+  height: 35rem;
 }
 
-.about-me-card {
+.cards img {
+  mix-blend-mode: overlay;
+}
+
+.about-me-card, .portfolio-card {
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  align-items: center;
   background-color: var(--bg-secondary);
-  border: none;
+  border-radius: 16px;
   box-shadow: 4px 4px 10px , -4px -4px 10px;
   color: var(--bg-secondary);
 }
 
-.about-me-image {
-  mix-blend-mode: overlay;
+.about-me-card:hover, .portfolio-card:hover {
+  transform: scale(1.05);
+  transition-duration: var(--transition-speed-secondary);
 }
 
-.about-me-text {
-  color: var(--text-primary);
-}
-
-.portfolio-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  background-color: var(--bg-secondary);
-  border: none;
-  box-shadow: 4px 4px 10px , -4px -4px 10px;
-  color: var(--bg-secondary);
-  }
-
-.portfolio-image {
-  mix-blend-mode: overlay;
-}
-
-.portfolio-text {
-  color: var(--text-primary);
-}
-
-.card-buttons button {
+.about-me-text a, .portfolio-text a {
+  font-size: 1.5rem;
   color: var(--text-secondary);
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  border-radius: 16px;
-  background: var(--bg-tertiary);
-  width: 100%;
-  height: 100%;
-  font-size: 1.25rem;
+  text-decoration: none;
+  z-index: 1;
+  position: relative;
+  bottom: 35rem;
+  font-weight: bold;
 }
 
 /* About Me */
@@ -295,8 +283,6 @@ main{
 }
 
 /* Calculator */
-/* Calculator Start */
-
 .Calc_Body {
     justify-content: center;
     align-items: center;
