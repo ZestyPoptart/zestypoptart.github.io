@@ -1,12 +1,3 @@
-/* Sidebar */
-const btn = document.querySelector('#btn');
-const sidebar = document.querySelector('.sidebar');
-
-btn.onclick = function () {
-    sidebar.classList.toggle('active');
-};
-
-
 /* Getting and storing name */
 const myButton = document.querySelector(".User_btn");
 const myHeading = document.querySelector("h1");

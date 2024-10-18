@@ -3,6 +3,7 @@
     font-family: "Comic Neue";
     --bg-primary: #1c1a1a;
     --bg-secondary: #111111;
+    --bg-tertiary: #0e0e0e;
     --text-primary: #4a97c5;
     --text-secondary: #346a8a;
     --transition-speed: 600ms;
@@ -160,4 +161,81 @@ main{
     {
       left: 0px;
     }
+}
+
+.welcome-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-text {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .welcome-page{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: var(--bg-secondary);
+  border: none;
+  box-shadow: 4px 4px 10px , -4px -4px 10px;
+  color: var(--bg-secondary);
+}
+
+.about-me-image {
+  mix-blend-mode: overlay;
+}
+
+.about-me-text {
+  color: var(--text-primary);
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: var(--bg-secondary);
+  border: none;
+  box-shadow: 4px 4px 10px , -4px -4px 10px;
+  color: var(--bg-secondary);
+}
+
+.portfolio-image {
+  mix-blend-mode: overlay;
+}
+
+.portfolio-text {
+  color: var(--text-primary);
+}
+
+.card-buttons button {
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: var(--bg-tertiary);
+  width: 100%;
+  height: 100%;
+  font-size: 1.25rem;
 }
