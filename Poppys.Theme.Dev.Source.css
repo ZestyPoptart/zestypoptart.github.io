@@ -16,13 +16,13 @@
 	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
-	--accent-1: hsl(0, 75%, 35%); /* links */
-	--accent-2: hsl(0, 75%, 35%); /* general unread/mention elements */
-	--accent-3: hsl(0, 75%, 35%); /* accent buttons */
-	--accent-4: hsl(0, 75%, 20%); /* accent buttons when hovered */
-	--accent-5: hsl(0, 75%, 20%); /* accent buttons when clicked */
-	--mention: hsla(0, 50%, 20%, 0.25); /* mentions & mention messages */
-	--mention-hover: hsla(0, 50%, 20%, 0.12); /* mentions & mention messages when hovered */
+	--accent-1: #9c1616; /* links */
+	--accent-2: #9c1616; /* general unread/mention elements */
+	--accent-3: #9c1616; /* accent buttons */
+	--accent-4: #590d0d; /* accent buttons when hovered */
+	--accent-5: #590d0d; /* accent buttons when clicked */
+	--mention: #4d191940; /* mentions & mention messages */
+	--mention-hover: #4d19191f; /* mentions & mention messages when hovered */
 
 	/* text colors */
 	--text-0: white; /* text on colored elements */
@@ -36,9 +36,8 @@
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
 	--bg-3: rgb(32, 32, 32, 1); /* spacing, secondary elements */
-	--bg-4: rgb(20, 20, 20, .5); /* main background color */
-	--bg-5: rgba(var(--bg-4), .5) ;
-	--theme-background-image: url("https://images7.alphacoders.com/115/1157070.jpg"); /* For image to appear change the 4th number in the line above to "0" */
+	--bg-4: rgb(20, 20, 20, 1); /* main background color */
+	--theme-background-image: url(""); /* For image to appear change the 4th number in the line above to "0" */
 	--theme-transparency: rgb(0, 0, 0, 0.6); /* Background image blur, first 3 numbers correspond to the color, last number is the opacity */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
@@ -194,7 +193,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 	background: var(--text-2);
 }
 .activeButtonChild_a06035 /* send button */ {
-	color: var(--accent-2);
+	color: var(--accent-2);	
 }
 .container_b2ca13 /* user panel button strikethroughs */,
 .numberBadge_df8943  /* unread number badge */,
